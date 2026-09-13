@@ -1,7 +1,3 @@
-Exactly. For the **final README**, the stable part should be the **description, purpose, philosophy, scope, and architecture direction**. Specific utilities and implementation details can be marked as **TODO** and updated as CloudForge grows.
-
-I would make the README intentionally **future-proof**, so you don't have to rewrite its identity every time you add a new AWS/Data/AI tool.
-
 # CloudForge
 
 ### Personal AWS, Data & AI Engineering Toolkit
