@@ -38,6 +38,10 @@ dependencies = [
     "PyYAML>=6.0"
 ]
 
+[project.scripts]
+s3-copy = "cli.s3_copy:main"
+lambda-layer = "cli.lambda_layer:main"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0",
@@ -62,7 +66,8 @@ include = [
     "ai*",
     "infrastructure*",
     "packaging*",
-    "automation*"
+    "automation*",
+    "cli*"
 ]
 
 [tool.pytest.ini_options]
