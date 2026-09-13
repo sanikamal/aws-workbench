@@ -1,0 +1,89 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aws-workbench"
+version = "0.1.0"
+description = "Personal AWS, Data & AI Engineering Toolkit"
+readme = "README.md"
+requires-python = ">=3.14"
+license = { text = "TODO" }
+authors = [
+    { name = "Sani Kamal" }
+]
+keywords = [
+    "aws",
+    "cloud",
+    "data-engineering",
+    "machine-learning",
+    "ai",
+    "generative-ai",
+    "automation",
+    "boto3",
+    "devops",
+    "mlops"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "boto3>=1.40",
+    "PyYAML>=6.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.14",
+    "ruff>=0.12"
+]
+
+[project.urls]
+Repository = "TODO"
+Documentation = "TODO"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "core*",
+    "aws*",
+    "data*",
+    "ml*",
+    "ai*",
+    "infrastructure*",
+    "packaging*",
+    "automation*"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "B",
+    "UP"
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
